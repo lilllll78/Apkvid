@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Dezipper le projet
-        run: unzip -q FaceCover.zip
+        run: for z in *.zip; do unzip -q -o "$z"; done
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
